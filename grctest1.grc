@@ -240,7 +240,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 284)</value>
+      <value>(624, 244)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1049,7 +1049,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(136, 276)</value>
+      <value>(48, 292)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1298,13 +1298,13 @@
   </connection>
   <connection>
     <source_block_id>multi_rtl_source_0</source_block_id>
-    <sink_block_id>low_pass_filter_0</sink_block_id>
+    <sink_block_id>qtgui_sink_x_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>multi_rtl_source_0</source_block_id>
-    <sink_block_id>qtgui_sink_x_1</sink_block_id>
+    <sink_block_id>low_pass_filter_0</sink_block_id>
     <source_key>1</source_key>
     <sink_key>0</sink_key>
   </connection>

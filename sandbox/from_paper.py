@@ -22,6 +22,12 @@ else:
     ch1 = ch1[:len(ch0)]
 print(ch0.shape)
 print(ch1.shape)
+
+N = len(ch0) # Number of samples
+# Sampling frequency
+f_s = 1E6*1.0
+# Sampling period
+T_s = 1/f_s
 # plt.plot(ch0.imag)
 
 corr = signal.fftconvolve(ch0,ch1)

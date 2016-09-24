@@ -75,7 +75,7 @@ if __name__ == "__main__":
     nx = 500
     f1 = 40  # chirp
     noise = .05 * 2  # * swing
-    plot = 0
+    plot = 1
     seed = 0
 
     exec( "\n".join( sys.argv[1:] ))  # run this.py n= ...  from sh or ipython
@@ -116,7 +116,7 @@ if __name__ == "__main__":
     print "LMS yest - y:", averr
     print "LMS weights:", lms.Wt
     if plot:
-        import pylab as pl
+        import matplotlib.pyplot as pl
         fig, ax = pl.subplots( nrows=2 )
         fig.set_size_inches( 12, 8 )
         fig.suptitle( title, fontsize=12 )

@@ -6,9 +6,9 @@ from scipy import signal
 #from scipy import fromfile, complex64
 import matplotlib.pyplot as plt
 
-path = "../example_data/ch0.cfile"
+path = "../new_example/ch0.cfile"
 ch0 = scipy.fromfile(path, dtype=scipy.complex64)
-path = "../example_data/ch1.cfile"
+path = "../new_example/ch1.cfile"
 ch1 = scipy.fromfile(path, dtype=scipy.complex64)
 
 print(ch0.shape)
@@ -41,9 +41,9 @@ for i in range(R,len(ch1)):
     for j in range(len(f_dop)):
         # shift_ch1[i] = ch1[i-R]
         corr[i,j] = signal.fftconvolve(ch0[i],ch1[i-R]*np.exp(-1j*2*np.pi*f_dop[j]/(len(ch1)-R)))
-# shift_ch1[i:i+1] = ch1[i-R,i-R+1]
+    #shift_ch1[i:i+1] = ch1[i-R,i-R+1]
 
-# corr = signal.fftconvolve(ch0,ch1)
+    #corr = signal.fftconvolve(ch0,ch1)
 
 print(corr[0])
 plt.plot(corr.real)

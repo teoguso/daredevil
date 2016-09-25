@@ -91,3 +91,5 @@ ENV/
 multi-rtl/
 top_block.py
 .DS_Store
+*~
+output_processing/*.cfile

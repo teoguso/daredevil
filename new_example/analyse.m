@@ -1,6 +1,6 @@
-%addpath ~/proj/shdb16/multi-rtl/examples/utils/
-%ch0=read_complex_binary('ch0.cfile');
-%ch1=read_complex_binary('ch1.cfile');
+addpath ~/daredevil/multi-rtl/examples/utils/
+ch0=read_complex_binary('ch0.cfile');
+ch1=read_complex_binary('ch1.cfile');
 
 
 c=3e8;

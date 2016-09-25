@@ -1,12 +1,10 @@
 addpath ~/daredevil/multi-rtl/examples/utils/
 
-
 for iter=1:100,
   system('./mutlirtl_rx_to_cfile_2chan.py');
-  ch0=read_complex_binary('../data/ch0.cfile');
-  ch1=read_complex_binary('../data/ch1.cfile');
-  
-  
+  ch0=read_complex_binary('ch0.cfile');
+  ch1=read_complex_binary('ch1.cfile');
+
   c=3e8;
   f0 = 88.8e6;
   maxrange = 100e3;

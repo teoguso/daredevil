@@ -7,9 +7,13 @@ Create a VR experience from passive radar signals.
 ## Project members
 
 @teoguso- math maker
+
 @meredityman- fearless cheerleader 
+
 @sveinb- radio mercenary
+
 @nolash- enigmatic VR prophet
+
 @xmunoz- software wench
 
 ## Components

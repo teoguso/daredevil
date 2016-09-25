@@ -56,7 +56,7 @@ def plot_crosscorrelation(path_data1, path_data2, sample_size):
         plt.clf()
         # plt.plot(np.sin(np.arange(100)/float(bi+1)))
         plt.title("Bin number "+str(bi))
-        plt.imshow(corr_tmp.real)
+        plt.imshow(corr_tmp.imag)
         # plt.pcolormesh(corr_tmp.real)
         plt.pause(0.01)
     plt.ioff()

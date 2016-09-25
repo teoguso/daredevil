@@ -90,3 +90,4 @@ ENV/
 
 multi-rtl/
 top_block.py
+.DS_Store

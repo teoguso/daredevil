@@ -35,8 +35,8 @@ Create a VR experience from passive radar signals.
 
 ## Output
 
-**X axis:** *Range*. Delay measured in samples. Total distance of transmitter to target plus target to recevier minus transmitter to receiver.
-**Y axis:** *Doppler shift*. 
+- **X axis:** *Range*. Delay measured in samples. Total distance of transmitter to target plus target to recevier minus transmitter to receiver.
+- **Y axis:** *Doppler shift*. 
 
 The "crosshair" shows the *auto-correlation* (horizontal) and the *power spectrum* (vertical) of the TV signal .
 

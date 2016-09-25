@@ -28,13 +28,14 @@ def plot_crosscorrelation(path_data1, path_data2, sample_size):
     T_s = 1/f_s
 
     # Doppler frequency range
-    f_dop = np.arange(0, 120, step=1)
+    n_f_dop = 120
+    f_dop = np.arange(0, n_f_dop, step=1)
 
     # time delay range
     R = 100
 
     plt.ion()
-    plt.colorbar()
+    # plt.colorbar()
 
     # corr = np.zeros((bucketSize, len(f_dop), bNum), dtype=np.complex64)
     corr_tmp = np.zeros((R,len(f_dop)), dtype=np.complex64)
@@ -52,11 +53,14 @@ def plot_crosscorrelation(path_data1, path_data2, sample_size):
                 corr_tmp[i, j] = ch0[i+iStart]  * ch1[i+iStart-j] * np.exp(-1j *2*np.pi*f_dop[j]*den_1)
             #i0 += 1
 
-    plt.clf()
-    # plt.plot(np.sin(np.arange(100)/float(bi+1)))
-    plt.title("Bin number "+str(bi))
-    plt.pcolormesh(corr_tmp.real)
-    plt.pause(0.001)
+        plt.clf()
+        # plt.plot(np.sin(np.arange(100)/float(bi+1)))
+        plt.title("Bin number "+str(bi))
+        plt.imshow(corr_tmp.real)
+        # plt.pcolormesh(corr_tmp.real)
+        plt.pause(0.01)
+    plt.ioff()
+    plt.show()
 
 
     # Display
@@ -75,7 +79,6 @@ def plot_crosscorrelation(path_data1, path_data2, sample_size):
         # plt.pause(0.05)
         # plt.clf()
 
-    plt.ioff()
 
 def main():
     sample_size = 15000

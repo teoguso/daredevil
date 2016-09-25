@@ -20,7 +20,7 @@ import multi_rtl
 
 class mutlirtl_rx_to_cfile_2chan(gr.top_block):
 
-    def __init__(self, ch0_id_string="0", ch1_id_string="1", fname_ch0='ch0.cfile', fname_ch1='ch1.cfile', freq_ch0=524e6, freq_ch1=524e6, freq_corr=0, gain_ch0=30, gain_ch1=30, nsamples=2000000, samp_rate=2e6, sync_freq=522e6, sync_gain_ch0=30, sync_gain_ch1=30):
+    def __init__(self, ch0_id_string="0", ch1_id_string="1", fname_ch0='../data/ch0.cfile', fname_ch1='../data/ch1.cfile', freq_ch0=524e6, freq_ch1=524e6, freq_corr=0, gain_ch0=30, gain_ch1=30, nsamples=2000000, samp_rate=2e6, sync_freq=522e6, sync_gain_ch0=30, sync_gain_ch1=30):
         gr.top_block.__init__(self, "Two channel multi-rtl RX to cfile")
 
         ##################################################

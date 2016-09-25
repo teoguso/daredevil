@@ -1,34 +1,44 @@
-# a checkout of this repo: https://github.com/ptrkrysik/multi-rtl
-addpath ../../multi-rtl/examples/utils/
-
-ch0=read_complex_binary('../data/ch0.cfile');
-ch1=read_complex_binary('../data/ch1.cfile');
+addpath ~/daredevil/multi-rtl/examples/utils/
 
 
-c=3e8;
-f0 = 88.8e6;
-maxrange = 100e3;
-maxvel = 500/3.6;
-maxdoppler = (c+maxvel)/c*f0 - f0
-len = length(ch0)
+for iter=1:100,
+  system('./mutlirtl_rx_to_cfile_2chan.py');
+  ch0=read_complex_binary('../data/ch0.cfile');
+  ch1=read_complex_binary('../data/ch1.cfile');
+  
+  
+  c=3e8;
+  f0 = 88.8e6;
+  maxrange = 100e3;
+  maxvel = 500/3.6;
+  maxdoppler = (c+maxvel)/c*f0 - f0;
 
-maxdelay = maxrange / c;
+  maxdelay = maxrange / c;
 
-fs = 200e3
+  fs = 200e3;
 
-maxshift = round(maxdelay * fs);
-maxtrans = round(maxdoppler / (fs / len))
+  len=min([length(ch0), length(ch1)]);
+  ch0=ch0(1:len);
+  ch1=ch1(1:len);
 
-out = zeros(2 * maxtrans + 1, 2 * maxshift + 1);
-CH0=fft(ch0);
-CH1=fft(ch1);
+  maxshift = round(maxdelay * fs);
+  maxtrans = round(maxdoppler / (fs / len));
 
-for i=-maxtrans:maxtrans,
+  CH0=fft(ch0);
+  CH1=fft(ch1);
 
-CORR = CH0 .* conj(shift(CH1, i));
-corr = ifft(CORR);
+  if iter==1,
+    out = zeros(2 * maxtrans + 1, 2 * maxshift + 1);
+  end
 
-out(i + maxtrans + 1, :) = [corr(end-maxshift : end), corr(1:maxshift)];
+
+  for i=-maxtrans:maxtrans,
+
+    CORR = CH0 .* conj(shift(CH1, i));
+    corr = ifft(CORR);
+
+    out(i + maxtrans + 1, :) = [corr(end-maxshift : end), corr(1:maxshift)];
+    image(abs(out)/10);
+    pause(0.001);
+  end
 end
-image(abs(out)/100);
-pause(10)

@@ -35,6 +35,13 @@ Create a VR experience from passive radar signals.
 
 ## Output
 
-![alt text](pictures/image1_cropped.png "Screenshot 1")
+**X axis:** *Range*. Delay measured in samples. Total distance of transmitter to target plus target to recevier minus transmitter to receiver.
+**Y axis:** *Doppler shift*. 
 
-![alt text](pictures/image2_cropped.png "Screenshot 2")
+The "crosshair" shows the *auto-correlation* (horizontal) and the *power spectrum* (vertical) of the TV signal .
+
+Radar objects would have been expected to appear as lightly blue to green colored objects in the quadrants. However, in the time we had at disposal after the system was functional, we were not able to record any further observations.
+
+![alt text](pictures/image1_cropped.png "Screenshot_1")
+
+![alt text](pictures/image2_cropped.png "Screenshot_2")

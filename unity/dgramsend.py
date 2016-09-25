@@ -19,7 +19,7 @@ if __name__ == "__main__":
 			datatosend.append(((float(random.random())) - 0.5) * 2.0)
 			datatosend.append(((float(random.random())) - 0.5) * 2.0)
 			datatosend.append(((float(random.random())) - 0.5) * 2.0)
-		print(datatosend[0], datatosend[1])
+		print("x{0} y{1} z{2}".format(datatosend[0], datatosend[1], datatosend[2]))
 		s.sendto(datatosend.tobytes(), (ip, port))
 		
 		time.sleep(0.25)

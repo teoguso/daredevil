@@ -9,8 +9,8 @@ import math
 
 
 # Read in data
-ch0 = scipy.fromfile("../new_example/ch0.cfile", dtype=scipy.complex64, count = 10000 )
-ch1 = scipy.fromfile("../new_example/ch1.cfile", dtype=scipy.complex64, count =  10000 )
+ch0 = scipy.fromfile("../new_example/ch0.cfile", dtype=scipy.complex64, count = 15000 )
+ch1 = scipy.fromfile("../new_example/ch1.cfile", dtype=scipy.complex64, count =  15000 )
 
 #print("Array lengths differ by " + abs(ch0.shape - ch0.shape) +" samples.")
 
@@ -51,7 +51,7 @@ print(corr.shape)
 
 ax = plt.subplot(111)
 
-quad = plt.pcolormesh(corr[:,:,0].real)
+quad = plt.pcolormesh(Log(corr[:,:,0].real))
 
 plt.colorbar()
 
@@ -60,7 +60,7 @@ plt.show()
 
 for bi in range(1, bNum) :
 
-    quad.set_array(corr[:,:,bi].real.ravel())
+    quad.set_array(Log(corr[:,:,bi].real).ravel())
     plt.draw()
 
 plt.ioff()

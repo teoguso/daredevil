@@ -30,3 +30,7 @@ Create a VR experience from passive radar signals.
 - Cables, duct tape, oscilloscope, solder, elbow grease
 
 ## Output
+
+![alt text](pictures/image1.png "Screenshot 1")
+
+![alt text](pictures/image2.png "Screenshot 2")

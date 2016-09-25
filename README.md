@@ -1,5 +1,7 @@
 # Passive Radar @ Science Hack Day Berlin 2016
 
+![alt text](pictures/passive_radar.png "Passive Radar")
+
 ## Mission
 
 Create a VR experience from passive radar signals.

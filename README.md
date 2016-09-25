@@ -50,4 +50,6 @@ Radar objects would have been expected to appear as lightly blue to green colore
 
 ![alt text](pictures/image2_cropped.png "Screenshot_2")
 
+## Outcomes
 
+Winner of the Science Hack Day Berlin 2016 Best Hardware Hack

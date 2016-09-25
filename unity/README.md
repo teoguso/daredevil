@@ -1,15 +1,15 @@
 # Unity visualization
 
-Proof of concept for transmitting finished radar matrix vertices to Unity binary via socket. 
+Proof of concept for transmitting finished radar matrix vertices to **Unity** binary via socket. 
 
 Tested to work on **Windows 7 x64**, **Android 4.1.2** and **Android 6.0.1** (included apk file is *Honeycomb*) with **Unity v5.3.5f1** and **v5.4.1**.
 
-Also did successful build for Gear VR with **Unity v5.3.5f1** and **Android 6.0.1**
+Also did successful build for **Gear VR** with **Unity v5.3.5f1** and **Android 6.0.1**
 
 
 ### `SceneController.cs`
 
-Script for controlling the Unity demo scene. Add it to an empty toplevel `GameObject`.
+Script for controlling the **Unity** demo scene. Add it to an empty toplevel `GameObject`.
 
 Instantiates 10 simple `GameObjects`, and positions them in the scene from the received *UDP data*. 
 
@@ -23,8 +23,10 @@ See [this question on stackoverflow\.com](http://gamedev.stackexchange.com/quest
 
 ### `dgramsend.py`
 
-Simply python script to send 3 x 10 floats to the *UDP* port open in the Unity script. Takes IP of the device running Unity as argument.
+Simple *Python* script to send 3 x 10 floats to the *UDP* port open in the Unity script. Takes IP of the device running Unity as argument.
+
+Runs on *Python 2.7.12* and *3.5.2* at least.
 
 ### `test.apk`
 
-Android package built for Meredith's phone (but with hardcoded IP address, so it's probably stale already).
+*Android* package built for Meredith's phone (but with hardcoded IP address, so it's probably stale already).

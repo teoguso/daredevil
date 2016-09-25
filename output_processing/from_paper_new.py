@@ -1,4 +1,3 @@
-from __future__ import print_function
 import numpy as np
 import scipy
 from scipy import signal
@@ -7,8 +6,8 @@ import math
 
 
 # Read in data
-ch0 = scipy.fromfile("../new_example/ch0.cfile", dtype=scipy.complex64, count = 15000 )
-ch1 = scipy.fromfile("../new_example/ch1.cfile", dtype=scipy.complex64, count =  15000 )
+ch0 = scipy.fromfile("../new_example/ch0.cfile", dtype=scipy.complex64, count=15000)
+ch1 = scipy.fromfile("../new_example/ch1.cfile", dtype=scipy.complex64, count=15000)
 
 #print("Array lengths differ by " + abs(ch0.shape - ch0.shape) +" samples.")
 

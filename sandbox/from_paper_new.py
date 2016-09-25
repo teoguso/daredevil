@@ -1,9 +1,7 @@
 from __future__ import print_function
 import numpy as np
-#import adaptfilt as adf
 import scipy
 from scipy import signal
-#from scipy import fromfile, complex64
 import matplotlib.pyplot as plt
 import math
 

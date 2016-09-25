@@ -42,6 +42,10 @@ The "crosshair" shows the *auto-correlation* (horizontal) and the *power spectru
 
 Radar objects would have been expected to appear as lightly blue to green colored objects in the quadrants. However, in the time we had at disposal after the system was functional, we were not able to record any further observations.
 
+![alt text](pictures/IMG_20160925_143059.jpg "Hardware")
+
 ![alt text](pictures/image1_cropped.png "Screenshot_1")
 
 ![alt text](pictures/image2_cropped.png "Screenshot_2")
+
+

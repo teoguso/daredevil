@@ -36,19 +36,33 @@ def calc_params(binSizeTim):
                 'maxrange'  : maxrange,
                 'maxvel'    : maxvel,
                 'maxdoppler': maxdoppler,
-                'maxdelay'  : maxdelay,}
+                'maxdelay'  : maxdelay    }
 
     return params
 
 def adaptiveFiltering(ch0, ch1):
-    ch1 = ch1 - ch0 # Shitty hack
-    return ch0, ch1
+    binSizeTim = np.size(ch0,0)
+    biNum = np.size(ch0,1)
+    
+    M = 5;
+    step = binSizeTim / 5.0;
+    
+    N = binSizeTim - M + 1
+    ch0out = np.zeros(( N, biNum ))
+    ch1out = np.zeros(( N, biNum ))
+
+    for bi in range(biNum):    
+        ch0out[:,bi], ch1out[:,bi], _ = adaptfilt.nlms(ch1[:,bi], ch0[:,bi], M, step)
+        
+    
+    return ch0out, ch1out
     
 def crosscorrelation(ch0, ch1, params ):
     maxshift = params['maxshift']
     maxtrans = params['maxtrans']
     binSizeTim = np.size(ch0,0)
     biNum = np.size(ch0,1)
+    
     plt.ion()
 
     tempOut = np.zeros((2 * maxtrans + 1, 2 * maxshift + 1), dtype=np.complex64)

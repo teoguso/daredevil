@@ -74,7 +74,7 @@ def crosscorrelation(ch0, ch1, params ):
         ch1fft = scipy.fftpack.fft(np.transpose(ch1[:,bi])) 
         
         for i in range(-maxtrans, maxtrans+1):
-            coor = np.zeros( (len(ch1fft)), dtype=np.complex64)
+            # coor = np.zeros( (len(ch1fft)), dtype=np.complex64)
             
             coor = np.multiply(ch1fft, np.conjugate(np.roll(ch0fft,i)))
             coor = scipy.fftpack.ifft(coor)
